@@ -9,8 +9,8 @@ This classifier is based on Zhao el al on JAMA for the microarray data, and if y
 import pandas as pd
 from cls.PAM50_classifier import PAM50_CLS
 
-df = pd.read_csv('dataset/example_expr.csv', index_col=0)
-pam50 = PAM50_CLS(df)
+df = pd.read_csv('cls/dataset/example_expr.csv', index_col=0)
+pam50 = PAM50_CLS(df, score_softmax=True)
 
 print pam50.pam50_result ### Predict result
 print pam50.pam50_score ### Decision score of predict result
