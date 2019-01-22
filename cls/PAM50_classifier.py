@@ -53,7 +53,7 @@ class PAM50_CLS:
 		self.score_softmax = score_softmax
 
 		### Load Centroid
-		_parker_centroid = pd.read_csv('dataset/pam50_centroid.tsv', sep='\t', index_col=0)
+		_parker_centroid = pd.read_csv('cls/dataset/pam50_centroid.tsv', sep='\t', index_col=0)
 		_parker_centroid.index = _parker_centroid.index.map(int)
 		_parker_centroid.index = _parker_centroid.index.map(str)
 
