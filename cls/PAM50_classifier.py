@@ -45,7 +45,8 @@ class PAM50_CLS:
 		result_score = pd.DataFrame(data=cl_score, index=df.columns.tolist(), columns = classifier_label)
 
 		if self.score_softmax==True:
-			result_score = result_score.apply(softmax)
+			result_score = result_score.apply(softmax, axis=1)
+
 		return result_df, result_score
 
 	def __init__(self, df, score_softmax=True):
