@@ -11,8 +11,8 @@ from cls.PAM50_classifier import PAM50_CLS
 
 df = pd.read_csv('cls/dataset/example_expr.csv', index_col=0)
 
-# score_softmax = True : it means Desicision score will be processed to softmax(0~1), 
-# if it is False, score will be just correlation score
+# score_softmax = True : it means Desicision score will be processed to softmax(0~1).
+# If it is False, score will be just correlation score
 pam50 = PAM50_CLS(df, score_softmax=True)
 
 
