@@ -9,6 +9,7 @@ This classifier is based on Zhao el al on JAMA for the microarray data, and if y
 import pandas as pd
 from cls.PAM50_classifier import PAM50_CLS
 
+# Expression data has to be median centered and EntrezID indexed
 df = pd.read_csv('cls/dataset/example_expr.csv', index_col=0)
 
 # score_softmax = True : It means desicision score will be calculated to softmax(0~1).
